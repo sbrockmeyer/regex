@@ -18,31 +18,43 @@ public final class App {
     }
 
     public static boolean isValidHumanName(String name){
-
+        if(name == null){
+            return false;
+        }
+        String nameRegex = "([A-Z][a-zA-Z-.']* *)+";
+        return name.matches(nameRegex);
     }
 
     public static boolean isValidEmailAdress(String email) {
-        
+        if(email == null){
+            return false;
+        }
+        String emailRegex = "";
+        return email.matches(emailRegex);
     }
 
     public static boolean isValidPhoneNumbedr(String phone){
         if(phone == null){
             return false;
         }
-        String regexPhoneString = "[0-9]{0,2}-?[0-9]{3}-[0-9]{3}-[0-9]{4}";
-        return phone.matches(regexPhoneString);
+        String phoneRegex = "[0-9]{0,2}-?[0-9]{3}-[0-9]{3}-[0-9]{4}";
+        return phone.matches(phoneRegex);
     }
 
     public static boolean isValidSSN(String ssn){
-
+        if(ssn == null){
+            return false;
+        }
+        String ssnRegex = "";
+        return ssn.matches(ssnRegex);
     }
 
     public static boolean validatePaswordComplexity(String password, int midlength, int minUpper, int minLower, int minNumeric, int minSymbols){
-
+        return false;
     }
 
     public static String[] getHTMLTagsContents(String html, String tagName){
-
+        
     }
 
     public static String[] getHTMLLinkURL(String html){
