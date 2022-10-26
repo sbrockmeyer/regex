@@ -29,11 +29,11 @@ public final class App {
         if(email == null){
             return false;
         }
-        String emailRegex = "";
+        String emailRegex = "[a-zA-Z]+[0-9/_./]?@[a-zA-Z0-9]+.[a-zA-Z0-9]{3,4}";
         return email.matches(emailRegex);
     }
 
-    public static boolean isValidPhoneNumbedr(String phone){
+    public static boolean isValidPhoneNumber(String phone){
         if(phone == null){
             return false;
         }
@@ -45,7 +45,7 @@ public final class App {
         if(ssn == null){
             return false;
         }
-        String ssnRegex = "";
+        String ssnRegex = "[0-9]{3}-[0-9]{2}-[0-9]{4}";
         return ssn.matches(ssnRegex);
     }
 
@@ -53,11 +53,11 @@ public final class App {
         return false;
     }
 
-    public static String[] getHTMLTagsContents(String html, String tagName){
+    // public static String[] getHTMLTagsContents(String html, String tagName){
         
-    }
+    // }
 
-    public static String[] getHTMLLinkURL(String html){
+    // public static String[] getHTMLLinkURL(String html){
         
-    }
+    // }
 }
